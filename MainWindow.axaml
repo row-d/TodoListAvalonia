@@ -1,0 +1,34 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="TodoListAvalonia.MainWindow"
+        Title="TodoListAvalonia">
+	<ScrollViewer>
+		<Border Padding="50,100,50,100">
+			<StackPanel Orientation="Horizontal">
+				<StackPanel
+					Spacing="25">
+					<TextBlock Text="Crear TODO" Foreground="Aquamarine" />
+					<TextBox  Watermark="Hacer la tarea" x:Name="txtTODO"  />
+					<Button Content="Crear TODO item" Click="OnClickAddTODO"  />
+
+					<TextBlock Text="Borrar TODO" />
+					<TextBox  Watermark="Hacer la tarea" x:Name="txtTODODelete"  />
+					<Button Content="Borrar TODO item" Click="OnClickDeleteTODO"  />
+
+					<TextBlock Text="Editar TODO" />
+					<TextBox  Watermark="Hacer la tarea" x:Name="txtTODOEditOld"  />
+					<TextBox  Watermark="Hacer la tarea" x:Name="txtTODOEditNew"  />
+					<Button Content="Editar TODO item" Click="OnClickEditTODO"  />
+
+					<Button Content="Reiniciar" Click="OnClickResetTODO"  />
+				</StackPanel>
+				<StackPanel Spacing="25">
+					<TextBlock  x:Name="txtItemTODO" />
+				</StackPanel>
+			</StackPanel>
+		</Border>
+	</ScrollViewer>
+</Window>
